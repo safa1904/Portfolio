@@ -1,6 +1,7 @@
 import { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import Loader from '../components/Loader'
+import { Sky } from '../models/Sky'
 import Island from '../models/Island'
 
 
@@ -25,11 +26,11 @@ const Home = () => {
       <Canvas className=" w-full h-screen bg-transparent"
       camera={{near: 0.1, far: 1000}}>
         <Suspense fallback={<Loader/>}>
-          <directionalLight/>
-          <ambientLight/>
-          <pointLight/>
-          <spotLight/>
-          <hemisphereLight/>
+          <directionalLight postion={[1,1,1]} intensity={2}/>
+          <ambientLight intensity={0.5}/>
+          <hemisphereLight skyColor = "#b1e1ff" groundColor="#000000"
+          intensity={1}/>
+          <Sky/>
           <Island
           position= {islandPosition}
           scale= {islandScale}
@@ -37,7 +38,6 @@ const Home = () => {
           />
         </Suspense>
       </Canvas>
-
     </section>
   )
 }
