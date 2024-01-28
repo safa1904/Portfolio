@@ -12,6 +12,7 @@ import Plane from '../models/Plane';
 {/* <div className="absolute top-28 left-0 right-0 z-10 flex item-center justify-center">
   POPUP
 </div> */}
+
 const Home = () => {
   const[isRotating, setIsRotating] = useState(false);
   const[setCurrentStage,currentStage] = useState(1);
