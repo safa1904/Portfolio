@@ -4,26 +4,17 @@ import {
     contact,
     css,
     estate,
-    express,
     git,
     github,
     html,
     javascript,
     linkedin,
-    mongodb,
-    motion,
-    mui,
-    nextjs,
-    nodejs,
+    python,
     pricewise,
     react,
-    redux,
-    sass,
     snapgram,
     summiz,
-    tailwindcss,
     threads,
-    typescript
 } from "../assets/icons";
 
 export const skills = [
@@ -58,12 +49,12 @@ export const skills = [
         name: "React",
         type: "Frontend",
     },
-    // {   
-    //     imageUrl: Python,
-    //     name: "Python",
-    //     type: "programming",
+    {   
+        imageUrl: python,
+        name: "python",
+        type: "Beckend",
         
-    // }
+    }
 ];
 
 export const experiences = [
