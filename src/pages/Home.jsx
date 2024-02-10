@@ -2,12 +2,9 @@ import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useRef, useState } from "react";
 
 import sakura from "../assets/sakura.mp3";
-import Loader from '../components/Loader'
+import { HomeInfo, Loader } from "../components";
 
-import Island from '../models/Island';
-import Sky from '../models/Sky';
-import Bird from '../models/Bird';
-import Plane from '../models/Plane';
+import { Bird, Island, Plane, Sky } from "../models";
 
 const Home = () => {
   const audioRef = useRef(new Audio(sakura));
@@ -62,8 +59,8 @@ const Home = () => {
 
   return (
     <section className='w-full h-screen relative'>
-      <div className="absolute top-28 left-0 right-0 z-10 flex items-center justify-center">
-       POPUP 
+      <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
+        {currentStage && <HomeInfo currentStage={currentStage} />}
       </div>
 
       <Canvas
@@ -107,7 +104,14 @@ const Home = () => {
         </Suspense>
       </Canvas>
 
-      
+      {/* <div className='absolute bottom-2 left-2'>
+        <img
+          src={!isPlayingMusic ? soundoff : soundon}
+          alt='jukebox'
+          onClick={() => setIsPlayingMusic(!isPlayingMusic)}
+          className='w-10 h-10 cursor-pointer object-contain'
+        />
+      </div> */}
     </section>
   );
 };
