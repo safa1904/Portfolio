@@ -98,7 +98,7 @@ const Contact = () => {
               type='email'
               name='email'
               className='input'
-              placeholder='John@gmail.com'
+              placeholder='example@gmail.com'
               required
               value={form.email}
               onChange={handleChange}
@@ -143,13 +143,6 @@ const Contact = () => {
         >
           <directionalLight  intensity={2.5} position={[0, 0, 1]}/>
           <ambientLight intensity={0.5} />
-          {/* <pointLight position={[5, 10, 0]} intensity={2} />
-          <spotLight
-            position={[10, 10, 10]}
-            angle={0.15}
-            penumbra={1}
-            intensity={2}
-          /> */}
           <Suspense fallback={<Loader />}>
             <Fox
             currentAnimation={currentAnimation}
