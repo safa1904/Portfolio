@@ -59,11 +59,14 @@ export function Island({
       // Update the island's rotation based on the mouse/touch movement
       islandRef.current.rotation.y += delta * 0.01 * Math.PI;
 
+
       // Update the reference for the last clientX position
       lastX.current = clientX;
 
       // Update the rotation speed
       rotationSpeed.current = delta * 0.01 * Math.PI;
+      const { x, y, z } = islandRef.current.rotation;
+      console.log(`Rotation: X=${x}, Y=${y}, Z=${z}`);
     }
   };
 
@@ -88,6 +91,7 @@ export function Island({
       setIsRotating(false);
     }
   };
+  
 
   useEffect(() => {
     // Add event listeners for pointer and keyboard events

@@ -16,6 +16,21 @@ export function Islandn({
     // Get access to the Three.js renderer and viewport
     const { gl, viewport } = useThree();
     const { nodes, materials } = useGLTF(islandScene);
+    const initializeIslandRotation = () => {
+      if (nodes.Cube089_Material001_0 && nodes.Cube089_Material001_0_1) {
+        // Set initial rotation values for the first part
+        nodes.Cube089_Material001_0.rotation.set(30, 0, 0); // Adjust the values accordingly
+  
+        // Set initial rotation values for the second part
+        nodes.Cube089_Material001_0_1.rotation.set(30,0, 0); // Adjust the values accordingly
+      }
+    };
+   
+    
+    
+
+   
+
   
     // Use a ref for the last mouse x position
     const lastX = useRef(0);
@@ -57,13 +72,15 @@ export function Islandn({
         const delta = (clientX - lastX.current) / viewport.width;
   
         // Update the island's rotation based on the mouse/touch movement
-        islandRef.current.rotation.y += delta * 0.01 * Math.PI;
+        islandRef.current.rotation.y += delta * 0.25;
   
         // Update the reference for the last clientX position
         lastX.current = clientX;
   
         // Update the rotation speed
         rotationSpeed.current = delta * 0.01 * Math.PI;
+        const { x, y, z } = islandRef.current.rotation;
+        console.log(`Rotation: X=${x}, Y=${y}, Z=${z}`);
       }
     };
   
@@ -90,8 +107,11 @@ export function Islandn({
     };
   
     useEffect(() => {
+      
       // Add event listeners for pointer and keyboard events
       const canvas = gl.domElement;
+
+
       canvas.addEventListener("pointerdown", handlePointerDown);
       canvas.addEventListener("pointerup", handlePointerUp);
       canvas.addEventListener("pointermove", handlePointerMove);
@@ -165,10 +185,11 @@ export function Islandn({
     });
   return (
     // {Island 3D model from: https://sketchfab.com/3d-models/low-poly-floating-island-castle-5d1b9255af3c4bb791b4ac2e072c4696}
-    <a.group ref= {islandRef}{...props} >
+    <a.group ref= {islandRef}{...props}>
         <mesh
           geometry={nodes.Cube089_Material001_0.geometry}
           material={materials["Material.001"]}
+          
         />
         <mesh
           geometry={nodes.Cube089_Material001_0_1.geometry}
