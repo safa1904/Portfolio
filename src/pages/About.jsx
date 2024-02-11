@@ -1,12 +1,9 @@
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
+
 
 import { CTA } from "../components";
-import { skills,experiences } from "../constants";
+import { skills} from "../constants";
 
-import "react-vertical-timeline-component/style.min.css";
+
 
 const About = () => {
   return (

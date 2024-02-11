@@ -26,12 +26,6 @@ export function Islandn({
       }
     };
    
-    
-    
-
-   
-
-  
     // Use a ref for the last mouse x position
     const lastX = useRef(0);
     // Use a ref for rotation speed
