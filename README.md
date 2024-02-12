@@ -5,7 +5,7 @@
 ![demo](src/assets/portfolio.png)
 
 [![safa1904](https://custom-icon-badges.demolab.com/badge/made%20by%20-safa1904-556bf2?logo=github&logoColor=white&labelColor=101827)](https://github.com/safa1904)
-[![License](https://img.shields.io/github/license/safa1904/Portfolio?color=dddddd&labelColor=000000)](https://github.com/safa1904/Portfolio/LICENSE)
+[![License](https://img.shields.io/github/license/safa1904/Portfolio?color=dddddd&labelColor=000000)](https://github.com/safa1904/Portfolio/blob/master/LICENSE)
 [![Top Language](https://img.shields.io/github/languages/top/safa1904/Portfolio?logo=github&logoColor=%23007ACC&label=JavaScript)](https://www.javascriptlang.org/)
 [![Contributors](https://img.shields.io/github/contributors/safa1904/Portfolio?style=flat&color=orange&label=Contributors)](https://github.com/safa1904/Portfolio/graphs/contributors)
 ## 🌐 Live Demo
@@ -50,4 +50,4 @@ React.js and Three.js. It is a fully responsive website that works well on all d
 
 **Three.js 3D Portfolio** is open source software
 [licensed as MIT](https://opensource.org/license/mit/) and is free to use — See
-[LICENSE](https://github.com/safa1904/Portfolio/LICENSE) for more details.
+[LICENSE](https://github.com/safa1904/Portfolio/blob/master/LICENSE) for more details.
