@@ -4,7 +4,7 @@ import { Suspense, useEffect, useRef, useState } from "react";
 import sakura from "../assets/sakura.mp3";
 import { HomeInfo, Loader } from "../components";
 import { soundoff, soundon } from "../assets/icons";
-import { Bird, Island, Plane, Sky,Islandn} from "../models";
+import { Bird, Island, Plane, Sky} from "../models";
 
 
 const Home = () => {
@@ -37,7 +37,7 @@ const Home = () => {
       screenPosition = [0, -1.5, 0];
     } else {
       screenScale = [3, 3, 3];
-      screenPosition = [-4, -7, -13];
+      screenPosition = [0, -4, -4];
     }
 
     return [screenScale, screenPosition];
@@ -46,12 +46,12 @@ const Home = () => {
   const adjustIslandForScreenSize = () => {
     let screenScale, screenPosition;
     if (window.innerWidth < 768) {
-      screenScale = [1, 1, 1];
-      screenPosition = [0, 6, 4];
+      screenScale = [0.9, 0.9, 0.9];
+      screenPosition = [0, -6.5, -43.4];
     } else {
 
-      screenScale = [0.4, 0.4, 0.4];
-      screenPosition = [0,-5.5, -13.4];
+      screenScale = [1, 1, 1];
+      screenPosition = [0,-6.5, -43.4];
     }
     
 
@@ -91,13 +91,13 @@ const Home = () => {
 
           <Bird />
           <Sky isRotating={isRotating} />
-          <Islandn
+          <Island
             
             isRotating={isRotating}
             setIsRotating={setIsRotating}
             setCurrentStage={setCurrentStage}
             position={islandPosition}
-            rotation={[30, 0, 0]}
+            rotation={[0, 4.7077, 0]}
             scale={islandScale}
           />
           <Plane
