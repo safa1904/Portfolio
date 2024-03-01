@@ -1,8 +1,11 @@
 # MY 3D Portfolio 
 
 <!-- GitHub badges -->
+<br>
 
 ![demo](src/assets/portfolio.png)
+
+<br>
 
 [![safa1904](https://custom-icon-badges.demolab.com/badge/made%20by%20-safa1904-556bf2?logo=github&logoColor=white&labelColor=101827)](https://github.com/safa1904)
 [![License](https://img.shields.io/github/license/safa1904/Portfolio?color=dddddd&labelColor=000000)](https://github.com/safa1904/Portfolio/blob/master/LICENSE)
