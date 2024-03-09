@@ -6,16 +6,13 @@ import {
  
     contact,
     css,
-    
     git,
     github,
     html,
     javascript,
     linkedin,
     python,
-    
     react,
-    
 } from "../assets/icons";
 
 export const skills = [
@@ -115,7 +112,6 @@ export const experiences = [
     },
 
 ];
-
 export const socialLinks = [
     {
         name: 'Contact',
@@ -125,11 +121,27 @@ export const socialLinks = [
     {
         name: 'GitHub',
         iconUrl: github,
-        link: 'https://github.com/YourGitHubUsername',
+        link: 'https://github.com/safa1904',
     },
     {
         name: 'LinkedIn',
         iconUrl: linkedin,
-        link: 'https://www.linkedin.com/in/YourLinkedInUsername',
-    }
+        link: 'https://www.linkedin.com/in/saphia-mohamed-729608236/',
+    },
+];
+export const projects = [
+        {
+            
+            theme: 'btn-back-red',
+            name: 'Sushi website',
+            description: 'Developed a website for a sushi restaurant, including a menu, contact information, and a reservation form.', 
+            link: 'https://www.websushi.online/',
+        },
+        {
+            
+            theme: 'btn-back-green',
+            name: 'MACSHackathon',
+            description: 'Developed a game for the Hackathon',
+            link: 'https://github.com/safa1904/MACSHackathon',
+        },
 ];
